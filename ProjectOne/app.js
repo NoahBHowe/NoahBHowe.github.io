@@ -38,7 +38,7 @@ var $verdeGreen = function () {
   $(window).on('keydown', function(event) {
    (event.which === 83);
    $("#carOne").animate ({
-    "left" : "+=10px",
+    "left" : "+=100px",
   });
  });
 };
@@ -80,7 +80,7 @@ var $verdeGreenTwo = function () {
   $(window).off();
   $(window).on("click", (function() {
    $("#carTwo").animate ({
-    "left" : "+=10px",
+    "left" : "+=100px",
   });
 }));
 };
@@ -219,25 +219,35 @@ var $conundrumTwo = function () {
 },$randomTime);
 };
 
+var $victory = function () {
+   setInterval(function(){
+      if ($("#carOne").css("left")=="1000px"){
+         alert("You beat the Gridlock!");
+      }
+   }, 1000);
+}
 
-
-
+var $victoryTwo = function () {
+   setInterval(function(){
+      if ($("#carTwo").css("left")=="1000px"){
+         alert("You beat the Gridlock!");
+      }
+   }, 1000);
+}
 
 
 
 $(window).on('keydown', function(event) {
  (event.which === 84);
-    $conundrum(); //gotta call the functions!
+    $conundrum();
+    $victory();  //gotta call the functions!
   });
 
 
 $(window).on("click",(function() {
   $conundrumTwo();
+  $victoryTwo();
 }));
-
-
-
-
 
 
 
