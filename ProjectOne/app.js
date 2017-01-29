@@ -78,12 +78,11 @@ var $verdeGreenTwo = function () {
   $("#courseTwoLight").removeClass();
   $("#courseTwoLight").addClass("greenLight");
   $(window).off();
-  $(window).on('keydown', function(event) {
-   (event.which === 76);
+  $(window).on("click", (function() {
    $("#carTwo").animate ({
     "left" : "+=10px",
   });
- });
+}));
 };
 
 
@@ -91,12 +90,11 @@ var $amarilloYellowTwo = function () {
   $("#courseTwoLight").removeClass();
   $("#courseTwoLight").addClass("yellowLight");
   $(window).off();
-  $(window).on('keydown', function(event) {
-   (event.which === 76);
-   $("#carOne").animate ({
+  $(window).on("click", (function() {
+   $("#carTwo").animate ({
     "left" : "+=20px",
   });
- });
+}));
 };
 
 
@@ -105,13 +103,11 @@ var $rojoRedTwo = function () {
   $("#courseTwoLight").removeClass();
   $("#courseTwoLight").addClass("redLight");
   $(window).off();
-  $(window).on('keydown', function(event) {
-   (event.which === 76);
+  $(window).on("click", (function() {
    $("#carTwo").animate ({
     "left" : "-=15px",
   });
-
- });
+}));
 };
 
 
@@ -235,16 +231,12 @@ $(window).on('keydown', function(event) {
   });
 
 
-$(window).on("click",(function(event) {
+$(window).on("click",(function() {
   $conundrumTwo();
-});
-
-.on("click")
+}));
 
 
-$( "#" ).click(function() {
-  alert( "Handler for .click() called." );
-});
+
 
 
 
