@@ -244,5 +244,3 @@ $(window).on("click",(function() {
 
 
 
-
-
