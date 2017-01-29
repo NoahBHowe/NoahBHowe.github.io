@@ -169,7 +169,7 @@ var $goGreenTwo = function (){
     }
     var $timesRunRojoTwo =0;
     $verdeGreenTwo();
-  }),$ranodomTime;
+  }),$randomTime;
 };
 
 var $timesRunAmarilloTwo = 0;
@@ -181,7 +181,7 @@ var $goYellowTwo = function (){
     }
     var $timesRunVerdeTwo =0;
     $amarilloYellowTwo();
-  }),$ranodomTime;
+  }),$randomTime;
 };
 
 
@@ -194,35 +194,34 @@ var $goRedTwo = function (){
     }
     var $timesRunAmarilloTwo =0;
     $rojoRedTwo();
-  }),$ranodomTime;
+  }),$randomTime;
 };
 
 //Master interval functions!!******
 //**ONE**//
 var $conundrum = function () {
   setInterval(function(){
- if ($("#carOne").css("left")==="1000px") {
-      alert("You beat the Gridlock!");
-      clearInterval($conundrum);
-    }
-    $goGreen();
-    $goYellow();
-    $goRed();
-    },$randomTime);
+   if ($("#carOne").css("left")==="1000px") {
+    alert("You beat the Gridlock!");
+    clearInterval($conundrum);
+  }
+  $goGreen();
+  $goYellow();
+  $goRed();
+},$randomTime);
 };
 //**TWO**//
 var $conundrumTwo = function () {
   setInterval(function(){
- if ($("#carTwo").css("left")==="1000px") {
-      alert("You beat the Gridlock!");
-      clearInterval($conundrumTwo);
-    }
-    $goGreenTwo();
-    $goYellowTwo();
-    $goRedTwo();
-    },$ranodomTime);
+   if ($("#carTwo").css("left")==="1000px") {
+    alert("You beat the Gridlock!");
+    clearInterval($conundrumTwo);
+  }
+  $goGreenTwo();
+  $goYellowTwo();
+  $goRedTwo();
+},$randomTime);
 };
-
 
 
 
@@ -236,6 +235,15 @@ $(window).on('keydown', function(event) {
   });
 
 
+$(window).on("click",(function(event) {
+  $conundrumTwo();
+});
+
+.on("click")
+
+
+$( "#" ).click(function() {
+  alert( "Handler for .click() called." );
 });
 
 
